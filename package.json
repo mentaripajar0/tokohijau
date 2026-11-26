@@ -1,0 +1,15 @@
+{
+  "name": "tokohijau",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "check": "npm run check --workspace=apps/web",
+    "test": "npm run test --workspace=apps/web",
+    "deploy": "npm run deploy --workspace=apps/web"
+  }
+}
