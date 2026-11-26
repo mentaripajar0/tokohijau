@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'TokoHijau - Toko Produk Digital Otomatis via QRIS',
+  description = 'Beli ebook, template, voucher, dan lisensi digital di TokoHijau. Bayar pakai QRIS, produk otomatis masuk ke akun Google Anda.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-[var(--color-ink)] antialiased">
+    <header class="bg-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+        <a href="/" class="text-lg font-bold tracking-tight text-[var(--color-brand)]">
+          TokoHijau
+        </a>
+        <nav class="flex items-center gap-6 text-sm font-medium text-[var(--color-ink)]">
+          <a href="/#katalog" class="hover:text-[var(--color-brand)]">Katalog</a>
+          <a href="/pesanan" class="hover:text-[var(--color-brand)]">Pesanan</a>
+          <a
+            href="/login"
+            class="bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--color-brand-dark)]"
+          >
+            Masuk dengan Google
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="mt-24 bg-[var(--color-surface)]">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-8 text-sm text-[var(--color-muted)] sm:px-6">
+        <span class="font-semibold text-[var(--color-ink)]">TokoHijau</span>
+        <span>Produk digital otomatis via QRIS</span>
+      </div>
+    </footer>
+  </body>
+</html>

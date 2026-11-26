@@ -1,0 +1,33 @@
+---
+import StoreLayout from '../layouts/StoreLayout.astro';
+---
+
+<StoreLayout>
+  <section class="mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pt-20">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl font-bold leading-tight tracking-tight text-[var(--color-ink)] sm:text-5xl">
+        Produk digital siap pakai, masuk akun dalam hitungan detik.
+      </h1>
+      <p class="mt-5 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+        Masuk pakai akun Google, bayar dengan QRIS, ambil file atau kode di halaman pesanan.
+      </p>
+      <div class="mt-8">
+        <a
+          href="#katalog"
+          class="inline-block bg-[var(--color-brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-[var(--color-brand-dark)]"
+        >
+          Lihat Katalog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="katalog" class="bg-[var(--color-surface)] py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-[var(--color-ink)]">Katalog Produk</h2>
+      <p class="mt-3 text-sm text-[var(--color-muted)]">
+        Belum ada produk tayang. Tambahkan produk pertama dari panel admin.
+      </p>
+    </div>
+  </section>
+</StoreLayout>
